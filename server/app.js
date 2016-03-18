@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/",animalRouter);
 
-app.set("port",(process.env.PORT || 5000));
+app.set("port",(process.env.PORT || 3000));
 
 app.get("/*", function(req,res){
   var file = req.params[0] || "/views/index.html";
