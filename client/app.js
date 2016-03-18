@@ -26,12 +26,13 @@ function animalSubmit(event){
     url:"/animal",
     data: animal,
     success: function(data){
-      console.log(data);
+      pullOld();
     }
   });
 }
 
 function pullOld(){
+  $(".oldDB").empty();
   $.ajax({
     type:"GET",
     url:"/oldAnimal",
